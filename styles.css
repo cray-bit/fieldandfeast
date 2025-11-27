@@ -75,8 +75,7 @@ table {
 body {
     font-family: var(--font);
     margin: 0 auto;
-    padding: 1rem;
-    background-color: var(--soft-white);
+    background-color: var(--linen);
 }
 
 img {
@@ -86,6 +85,9 @@ img {
 }
 
 header {
+    width: 100%;
+    margin: 0;
+    display: block;
     background-color: var(--midnight-blue);
     color: var(--linen);
     text-align: center;
@@ -94,7 +96,7 @@ header {
 header img {
     width: 150px;
     height: auto;
-    margin: 1.5rem auto;
+    margin: 0 auto 1.5rem auto;
 }
 
 header p {
@@ -141,12 +143,9 @@ main {
 section {
     border-bottom: 2px solid var(--champagne-gold);
     margin: 1rem 0.25rem;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
 }
 
-p {
-    margin: 0.5rem 0;
-}
 
 h2 {
     color: var(--midnight-blue);
@@ -236,7 +235,7 @@ footer a:hover {
 /* MEDIA QUERY (medium) */
 
 @media (min-width:600px) {
-    body {
+    main {
         max-width: 650px;
         margin: 0 auto;
     }
@@ -274,4 +273,36 @@ footer a:hover {
 
 /* MEDIA QUERY (large) */
 
+@media (min-width: 900px) {
+
+    main {
+        max-width: 850px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+   .gallery div {
+    grid-column: 1/-1;
+   }
+}
+
 /* MEDIA QUERY (xl) */
+
+@media (min-width: 1200px) {
+    main {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+    .gallery div {
+        grid-column: 1/-1;
+    }
+}
